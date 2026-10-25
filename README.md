@@ -11,9 +11,11 @@
 - `test_sync.sql`: সিংকের যাচাই, শেষে `ALL SYNC TESTS PASSED` দেখালে ঠিক আছে
 - `returns.sql`: বিক্রি ফেরত (`create_sale_return`), শুধু মালিক করতে পারেন
 - `test_returns.sql`: ফেরতের যাচাই, শেষে `ALL RETURN TESTS PASSED` দেখালে ঠিক আছে
+- `recipes.sql`: রেস্টুরেন্ট মডিউল (খাবারের আইটেম, রেসিপি, `create_dish_sale`, খরচ ও লাভের ভিউ)
+- `test_recipes.sql`: রেসিপির যাচাই, শেষে `ALL RECIPE TESTS PASSED` দেখালে ঠিক আছে
 - `test.sql`: যাচাইয়ের স্ক্রিপ্ট। শেষে `ALL TESTS PASSED` দেখালে ঠিক আছে। শেষে সব রোলব্যাক হয়
 
-চালানোর ক্রম: `schema.sql`, `logic.sql`, `test.sql`, তারপর `sync.sql`, `test_sync.sql`, তারপর `returns.sql`, `test_returns.sql`। এগুলো এখনো আসল PostgreSQL-এ চালিয়ে পরীক্ষা করা হয়নি।
+চালানোর ক্রম: `schema.sql`, `logic.sql`, `test.sql`, তারপর `sync.sql`, `test_sync.sql`, তারপর `returns.sql`, `test_returns.sql`। রেস্টুরেন্টের জন্য `recipes.sql`, `test_recipes.sql` (`schema.sql` ও `logic.sql`-এর পর)। এগুলো এখনো আসল PostgreSQL-এ চালিয়ে পরীক্ষা করা হয়নি।
 - `docs/sync-design.md`: অফলাইন সিংকের নকশা
 - `prototypes/`: তিনটা ব্রাউজার প্রোটোটাইপ (নমুনা ডাটা, ডাটা শুধু ব্রাউজারে থাকে)
   - `pharmacy-inventory.html`: ব্যাচ, মেয়াদ, FEFO, স্ট্রিপ ভেঙে পিস, রোল (PIN ১২৩৪)
@@ -36,7 +38,7 @@
 - [x] কেনা ও বিক্রির লজিক (পরীক্ষা বাকি)
 - [ ] ফ্রেমওয়ার্ক বাছাই ও প্রথম মডিউল
 - [x] অফলাইন সিংকের নকশা (`docs/sync-design.md`)
-- [ ] রেসিপি টেবিল (রেস্টুরেন্ট)
+- [x] রেসিপি টেবিল ও ফাংশন (রেস্টুরেন্ট, পরীক্ষা বাকি)
 - [ ] ব্যাকআপ ও থার্মাল রসিদ প্রিন্ট
 - [ ] ভাইয়ের মতামত
 
